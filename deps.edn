@@ -1,5 +1,8 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.12.5"}}
+ :deps {org.clojure/clojure {:mvn/version "1.12.5"}
+        io.github.kotoba-lang/fmt
+        {:git/url "https://github.com/kotoba-lang/fmt.git"
+         :git/sha "9202d2c30fd4aa0a0c584b95644eaf5b6b19c293"}}
  :aliases
  {:cli {:main-opts ["-m" "kotoba.user-test.cli"]}
   :mcp {:extra-deps

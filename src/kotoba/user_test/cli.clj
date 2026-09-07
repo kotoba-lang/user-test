@@ -1,5 +1,5 @@
 (ns kotoba.user-test.cli
-  (:require [clojure.pprint :as pprint]
+  (:require [kotoba.lang.fmt :as fmt]
             [kotoba.user-test :as user-test]
             [kotoba.user-test.io :as user-io]))
 
@@ -43,7 +43,7 @@
 
 (defn -main [& args]
   (try
-    (pprint/pprint (execute args))
+    (fmt/pprint (execute args))
     (catch Exception error
       (binding [*out* *err*]
         (println (.getMessage error)))
