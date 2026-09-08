@@ -3,7 +3,7 @@
   participant record is held by this process; callers pass EDN-shaped JSON and
   hosts keep their own evidence store."
   (:require [clojure.data.json :as json]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kotoba.user-test :as user-test]
             [mcp.execute :as execute]
             [mcp.model :as model]
