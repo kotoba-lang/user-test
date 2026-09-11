@@ -24,16 +24,16 @@ references, hashes, aggregate scores and fixture studies only.
 ## CLI
 
 ```sh
-clojure -M:cli study validate --study resources/kotoba/user_test/example-study.edn
-clojure -M:cli study plan --study resources/kotoba/user_test/example-study.edn
-clojure -M:cli run evaluate --study study.edn --run run.edn
-clojure -M:cli project summarize --project org/product --evaluations evaluations.edn
-clojure -M:cli publication redact --input private-run.edn
+kbb -M:cli study validate --study resources/kotoba/user_test/example-study.edn
+kbb -M:cli study plan --study resources/kotoba/user_test/example-study.edn
+kbb -M:cli run evaluate --study study.edn --run run.edn
+kbb -M:cli project summarize --project org/product --evaluations evaluations.edn
+kbb -M:cli publication redact --input private-run.edn
 ```
 
 ## MCP
 
-`clojure -M:mcp` starts a newline-delimited stdio MCP server with four tools:
+`kbb -M:mcp` starts a newline-delimited stdio MCP server with four tools:
 
 - `user_test_validate`
 - `user_test_plan`
@@ -46,5 +46,5 @@ Cloud Itonami supplies the browser capability and evidence persistence.
 ## Tests
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
