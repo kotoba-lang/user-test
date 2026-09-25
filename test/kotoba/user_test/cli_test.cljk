@@ -1,5 +1,5 @@
 (ns kotoba.user-test.cli-test
-  (:require [clojure.java.io :as io]
+  (:require [kotoba.io :as io]
             [kotoba.test :refer [deftest is]]
             [kotoba.user-test.cli :as cli]))
 
