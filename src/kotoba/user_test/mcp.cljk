@@ -2,7 +2,7 @@
   "Stdio MCP adapter for the pure user-test contracts. No browser credential or
   participant record is held by this process; callers pass EDN-shaped JSON and
   hosts keep their own evidence store."
-  (:require [kotoba.json :as json]
+  (:require [kotoba.lang.error :as kerror] [kotoba.json :as json]
             [kotoba.lang.text :as str]
             [kotoba.user-test :as user-test]
             [mcp.execute :as execute]
@@ -57,7 +57,7 @@
   {:tool (reify ports/ITool
            (invoke [_ tool-name args]
              (try (invoke tool-name args)
-                  (catch clojure.lang.ExceptionInfo error
+                  (catch kerror/ExceptionInfo error
                     {:error (.getMessage error)
                      :type (some-> (:type (ex-data error)) str
                                    (str/replace #"^:" ""))}))))})
